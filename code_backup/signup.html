@@ -1,0 +1,30 @@
+<html>
+<head><title></title>
+<script type="text/javascript">
+function checkpass()
+{
+var p1 = document.getElementById("p1").value;
+var p2 = document.getElementById("p2").value;
+
+if(p1 != p2)
+{
+alert("Password does not match...");
+location.href = 'signup.html';
+}
+}
+</script>
+</head>
+<body>
+<form method="post" action="signup.php" enctype="multipart/form-data">
+username: <input type="text" name="user" size="20"/><br>
+password: <input type="password" name="pass" id="p1" sie="20"><br>
+retype password: <input type="password" name="pass2" id="p2" size="20"><br>
+user type: <select name="utype">
+		<option values="admin">Admin</option><option values="user">User</option><option values="maintenance">Maintenance</option>
+</select><br>
+image: <input type="file" name="fname"><br>
+<input type="submit" value="Submit" onclick="checkpass()">
+</form>
+
+</body>
+</html>
